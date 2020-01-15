@@ -3,5 +3,7 @@
 <%= form_for [@survey, @question] do |f| %>
   <%= f.label :query %>
   <%= f.text_field :query %>
+  <%= f.label :query_type %>
+  <%= f.select :query_type, options_for_select([['Text Field', 'text field'], ['Text Area', 'text area']]) %>
   <%= f.submit %>
 <% end %>

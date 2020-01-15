@@ -45,6 +45,6 @@ class QuestionsController < ApplicationController
 
   private
   def question_params
-    params.require(:question).permit(:query)
+    params.require(:question).permit(:query, :query_type)
   end
 end
